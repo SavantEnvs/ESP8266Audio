@@ -1,0 +1,9 @@
+project: savantenvs/ESP8266Audio
+target: fuzz_opus
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_opus/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_opus
+    libfuzzer: true
+    timeout: 5

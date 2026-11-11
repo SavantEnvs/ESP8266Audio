@@ -1,0 +1,7 @@
+# Per-Dockerfile ignore for `docker build -f mayhem/Dockerfile .`: prune untracked local build output
+# from the context. .git is kept (the image holds the full history) and every tracked file is kept, so
+# /mayhem matches the commit exactly.
+/mayhem/build-fuzz
+/mayhem/build-test
+/fuzz_*
+/ctrf-report.json

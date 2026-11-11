@@ -1,0 +1,9 @@
+project: savantenvs/ESP8266Audio
+target: fuzz_rtttl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rtttl/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rtttl
+    libfuzzer: true
+    timeout: 5
